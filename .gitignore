@@ -1,0 +1,82 @@
+# Unity generated state (Unity project is planned at repository root)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Bb]uild/
+/[Bb]uilds/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+/.utmp/
+/UIElementsSchema/
+/ExportedObj/
+/sysinfo.txt
+mono_crash.*
+
+# IDE / compiler generated files
+.vs/
+.idea/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.suo
+*.user
+*.userprefs
+*.DotSettings.user
+*.pidb
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+/[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Local build, device and visual-test artifacts
+/.gradle/
+/artifacts/
+/cache/
+*.apk
+*.aab
+*.log
+*.tmp
+*.blend1
+*.blend1.meta
+
+# Generated Unity package data
+/ServerData/
+/[Aa]ssets/StreamingAssets/aa/
+/[Aa]ssets/StreamingAssets/aa.meta
+/[Aa]ssets/AddressableAssetsData/link.xml*
+/[Aa]ssets/AddressableAssetsData/*/addressables_content_state.bin*
+/[Aa]ssets/Addressables_Temp*
+/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+/[Aa]ssets/[Ss]ceneDependencyCache*
+/[Aa]ssets/Unity.VisualScripting.Generated/
+/[Aa]ssets/Unity.VisualScripting.Generated.meta
+
+# Local credentials, Android signing and machine-specific configuration
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.ulf
+*.alf
+/local.properties
+/.codex/auth.json
+
+# OS/editor temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+
+# Assets, .meta, Packages (including packages-lock.json), and ProjectSettings
+# are source data and must remain tracked. Do not ignore them globally.
