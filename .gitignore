@@ -1,82 +1,59 @@
-# Unity generated state (Unity project is planned at repository root)
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
-/[Bb]uild/
-/[Bb]uilds/
-/[Mm]emoryCaptures/
-/[Rr]ecordings/
-/.utmp/
-/UIElementsSchema/
-/ExportedObj/
-/sysinfo.txt
-mono_crash.*
+# Unity generated folders and files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
-# IDE / compiler generated files
+# IDE/editor generated files
 .vs/
+.vscode/
 .idea/
-.consulo/
 *.csproj
-*.unityproj
 *.sln
 *.slnx
-*.suo
 *.user
 *.userprefs
-*.DotSettings.user
 *.pidb
+*.booproj
+*.svd
 *.pdb
 *.mdb
 *.opendb
 *.VC.db
-*.pidb.meta
-*.pdb.meta
-*.mdb.meta
-/[Aa]ssets/Plugins/Editor/JetBrains*
 
-# Local build, device and visual-test artifacts
-/.gradle/
-/artifacts/
-/cache/
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Unity crash and build output
+sysinfo.txt
+*.stacktrace
+crashlytics-build.properties
+artifacts/
+!artifacts/.gitkeep
+
+# Local editor/licensing state
+.utmp/
+*.ulf
+*.unitypackage
+
+# Android/Gradle generated output
+.gradle/
 *.apk
 *.aab
-*.log
-*.tmp
-*.blend1
-*.blend1.meta
+*.keystore
+*.jks
+*.user.keystore
 
-# Generated Unity package data
-/ServerData/
-/[Aa]ssets/StreamingAssets/aa/
-/[Aa]ssets/StreamingAssets/aa.meta
-/[Aa]ssets/AddressableAssetsData/link.xml*
-/[Aa]ssets/AddressableAssetsData/*/addressables_content_state.bin*
-/[Aa]ssets/Addressables_Temp*
-/[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
-/[Aa]ssets/[Ss]ceneDependencyCache*
-/[Aa]ssets/Unity.VisualScripting.Generated/
-/[Aa]ssets/Unity.VisualScripting.Generated.meta
-
-# Local credentials, Android signing and machine-specific configuration
+# Keep local machine overrides out of source control
 .env
 .env.*
 !.env.example
-*.keystore
-*.jks
-*.ulf
-*.alf
-/local.properties
-/.codex/auth.json
-
-# OS/editor temporary files
-.DS_Store
-Thumbs.db
-Desktop.ini
-*~
-*.swp
-*.swo
-
-# Assets, .meta, Packages (including packages-lock.json), and ProjectSettings
-# are source data and must remain tracked. Do not ignore them globally.
+local-settings.json

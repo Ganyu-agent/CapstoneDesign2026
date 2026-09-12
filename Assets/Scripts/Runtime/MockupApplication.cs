@@ -1,0 +1,110 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace CapstoneDesign.Runtime
+{
+    /// <summary>
+    /// Owns the intentionally small navigation surface for the first mockup.
+    /// The activity/settings panels are overlays; the island remains the
+    /// default view and can always be reached from the centre button.
+    /// </summary>
+    public sealed class MockupNavigation : MonoBehaviour
+    {
+        [Header("Panels")]
+        [SerializeField] public GameObject islandPanel;
+        [SerializeField] public GameObject activitiesPanel;
+        [SerializeField] public GameObject settingsPanel;
+
+        [Header("Navigation buttons")]
+        [SerializeField] public Button activitiesButton;
+        [SerializeField] public Button islandButton;
+        [SerializeField] public Button settingsButton;
+
+        private void Awake()
+        {
+            if (activitiesButton != null)
+            {
+                activitiesButton.onClick.AddListener(ShowActivities);
+            }
+
+            if (islandButton != null)
+            {
+                islandButton.onClick.AddListener(ShowIsland);
+            }
+
+            if (settingsButton != null)
+            {
+                settingsButton.onClick.AddListener(ShowSettings);
+            }
+
+            ShowIsland();
+        }
+
+        private void OnDestroy()
+        {
+            if (activitiesButton != null)
+            {
+                activitiesButton.onClick.RemoveListener(ShowActivities);
+            }
+
+            if (islandButton != null)
+            {
+                islandButton.onClick.RemoveListener(ShowIsland);
+            }
+
+            if (settingsButton != null)
+            {
+                settingsButton.onClick.RemoveListener(ShowSettings);
+            }
+        }
+
+        public void ShowIsland()
+        {
+            SetActivePanel(islandPanel);
+        }
+
+        public void ShowActivities()
+        {
+            SetActivePanel(activitiesPanel);
+        }
+
+        public void ShowSettings()
+        {
+            SetActivePanel(settingsPanel);
+        }
+
+        private void SetActivePanel(GameObject selected)
+        {
+            if (islandPanel != null)
+            {
+                islandPanel.SetActive(selected == islandPanel);
+            }
+
+            if (activitiesPanel != null)
+            {
+                activitiesPanel.SetActive(selected == activitiesPanel);
+            }
+
+            if (settingsPanel != null)
+            {
+                settingsPanel.SetActive(selected == settingsPanel);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Small runtime quality guard. It is deliberately independent of the
+    /// project's Editor generated scene so it can also be used by a hand-made
+    /// test scene later.
+    /// </summary>
+    public sealed class MockupRuntime : MonoBehaviour
+    {
+        [SerializeField] private int targetFrameRate = 60;
+
+        private void Awake()
+        {
+            Application.targetFrameRate = targetFrameRate;
+            Screen.sleepTimeout = SleepTimeout.SystemSetting;
+        }
+    }
+}
